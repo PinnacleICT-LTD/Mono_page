@@ -1,0 +1,20 @@
+.header{
+  background-image: url("./assets/hero-blue.svg");
+  overflow: hidden;
+  min-height: 675px;
+}
+
+.phone{
+  position: absolute;
+  top: 20rem;
+  left: 40rem;
+}
+
+*{
+  font-family: 'DM Sans', sans-serif;
+}
+
+.download{
+  position: absolute;
+  top: 35rem;
+}
