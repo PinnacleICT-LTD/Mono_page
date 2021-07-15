@@ -325,21 +325,24 @@ function App() {
               <Text fontSize="6xl">Getting started takes less than 10 minutes</Text>
             </Box>
             
-            <Flex direction="row" align-items="end">
-              <HStack spacing={2}>
-                <Button color="white" backgroundColor="blue">
-                  <HStack spacing={2}>
-                    <Text>Start now</Text>
-                    <BsArrowRight />
-                  </HStack>
-                </Button>
-                <Button color="blue" backgroundColor="whitesmoke">
-                  <HStack spacing={2}>
-                    <Text>Talk to sales team</Text>
-                    <BiHeadphone />
-                  </HStack>
-                </Button>
-              </HStack>
+            <Flex direction="row">
+              <Spacer />
+              <Box p="1.5rem">
+                <HStack spacing={2}>
+                  <Button color="white" backgroundColor="blue">
+                    <HStack spacing={2}>
+                      <Text>Start now</Text>
+                      <BsArrowRight />
+                    </HStack>
+                  </Button>
+                  <Button color="blue" backgroundColor="whitesmoke">
+                    <HStack spacing={2}>
+                      <Text>Talk to sales team</Text>
+                      <BiHeadphone />
+                    </HStack>
+                  </Button>
+                </HStack>
+              </Box>
             </Flex>
           </Grid>
 
@@ -420,8 +423,6 @@ function App() {
               <Image src={Twitter} />
               <Text>Twitter</Text>
             </HStack>
-
-            <sup>.</sup>
             
             <HStack spacing={1}>
               <Image src={LinkedIn} />
