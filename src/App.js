@@ -3,8 +3,11 @@ import {Button, Box, Link, Spacer, Text, HStack, Flex, Grid, Tab, Tabs, TabList,
 import Nigeria from './assets/nigeria.svg';
 import Blue from './assets/blue.svg';
 import Blue2 from './assets/blue2.svg';
-import {BsArrowRight} from 'react-icons/bs';
+import Twitter from './assets/twitter.svg';
+import LinkedIn from './assets/linkedin.svg';
+import {BsArrowRight, BsFillPlayFill} from 'react-icons/bs';
 import {BiHeadphone} from 'react-icons/bi';
+import Footer from './assets/footer.svg';
 import Phone from './assets/landing-hero-phone.png';
 import Laptop from './assets/landing-hero-laptop.png';
 import Download from './assets/download.png';
@@ -25,8 +28,8 @@ import Developers from './assets/developers.svg';
 function App() {
   return (
     <Box>
-      <Grid templateColumns="3fr" backgroundImage={Background} gap={6} pr="6.3rem" pl="6.3rem" pt="0.2em" overflow="hidden" className="header">
-        <HStack>
+      <Grid templateColumns="3fr" backgroundImage={Background} gap={6} pr="6.3rem" pl="6.3rem" pt="0rem" overflow="hidden" className="header">
+        <HStack pt="0rem">
           <Image src={Blue} width="24" height="24" />
           <Spacer />
 
@@ -41,7 +44,7 @@ function App() {
           <Spacer />
           <HStack spacing={5}>
             <Image src={Nigeria} width="17" height="17" />
-            <Button color="white" colorScheme="blue">
+            <Button color="white" backgroundColor="blue">
               <HStack spacing={2}>
                 <Text>Log In </Text>
                 <BsArrowRight width="24" height="24" />
@@ -128,7 +131,7 @@ function App() {
             </Box>
         </Grid>
 
-        <Grid templateColumns="1fr 1fr" mt="2rem">
+        <Grid templateColumns="1fr 1fr" mt="3rem">
           <Box>
             <Image src={FinancialData} width="8rem" height="8rem" mb="5rem" />
             <Text  pb="1.5rem" color="#050929" fontSize="3xl">Connect</Text>
@@ -139,7 +142,7 @@ function App() {
                 <BsArrowRight />
               </HStack>
             </Button>
-            <Box mt="6.3rem">
+            <Box mt="3rem">
               <HStack spacing={6} mr="2rem" mb="1.5rem">
                 <HStack spacing={3}>
                   <Image src={Check} />
@@ -167,7 +170,7 @@ function App() {
           </Box>
         </Grid>
 
-        <Grid templateColumns="1fr 1fr" mt="2rem" bg="transparent">
+        <Grid templateColumns="1fr 1fr" mt="3rem" bg="transparent">
           <Box>
             <Image src={DirectDebit} width="8rem" height="8rem" mb="5rem" />
             <Text  pb="1.5rem" color="#050929" fontSize="3xl">Direct Debit</Text>
@@ -178,7 +181,7 @@ function App() {
                 <BsArrowRight />
               </HStack>
             </Button>
-            <Box mt="6.3rem">
+            <Box mt="3rem">
               <HStack spacing={6} mr="2rem" mb="1.5rem">
                 <HStack spacing={3}>
                   <Image src={Check} />
@@ -206,7 +209,7 @@ function App() {
           </Box>
         </Grid>
 
-        <Grid templateColumns="1fr 1fr" mt="2rem">
+        <Grid templateColumns="1fr 1fr" mt="3rem">
           <Box>
             <Image src={StatementPages} width="8rem" height="8rem" mb="5rem" />
             <Text  pb="1.5rem" color="#050929" fontSize="3xl">Statement Pages</Text>
@@ -217,7 +220,7 @@ function App() {
                 <BsArrowRight />
               </HStack>
             </Button>
-            <Box mt="6.3rem">
+            <Box mt="3rem">
               <HStack spacing={6} mr="2rem" mb="1.5rem">
                 <HStack spacing={3}>
                   <Image src={Check} />
@@ -246,14 +249,14 @@ function App() {
         </Grid>
       </Box>
 
-        <Grid templateColumns="1fr 1fr" backgroundColor="current" backgroundImage={Developers} mt="2rem">
+        <Grid templateColumns="1fr 1fr" backgroundColor="#0e175d" backgroundImage={Developers} mt="2rem">
           <Box pl="6.3rem" p="7rem" minHeight="450px">
             <Button color="orange" mb="3rem">
               <Text>Built with 💙 for developers</Text>
             </Button>
             <Text color="white"  mb="3rem" fontSize="5xl">Powerful, easy-to-use</Text>
             <Text color="white"  mb="3rem">We agonize over the right abstractions so your teams don't need to stich together disperate systems or spend months to integrate. We have made integration easy for you with simple API call and clear documentation guides to ensure that you can get up and running in on time.</Text>
-            <Button color="black">
+            <Button color="white" p="1.5rem" backgroundColor="#0e174a">
               <HStack spacing={3}>
                 <Text>Explore docs</Text>
                 <BsArrowRight />
@@ -301,9 +304,11 @@ function App() {
                         <Button color="#182cd1">
                           <HStack spacing={3}>
                             <Text>Click here to run </Text>
-                            <BsArrowRight />
+                            <BsFillPlayFill />
                           </HStack>
                         </Button>
+
+                        <Spacer />
   
                         <Text borderRadius="full" color="orange">JSon</Text>
                       </Flex>
@@ -338,6 +343,7 @@ function App() {
             </Flex>
           </Grid>
 
+        <Box backgroundImage={Footer}>
         <Box pl="6.3rem" pr="6.3rem" pt="1.5rem">
           <Grid templateColumns="1fr 1fr 1fr 1fr" gap={8}>
             <Box>
@@ -345,57 +351,84 @@ function App() {
             </Box>
 
               <Box>
-                <Grid templateColumns="1fr" gap={2}>                  <Text fontWeight="bold">Products</Text>
-                  <Text>Mono Connect</Text>
-                  <Text>Direct Debit</Text>
-                  <Text>Statement Pages</Text>
-                </Grid>
+                <Grid templateColumns="1fr" gap={4}>
+                  <Grid templateColumns="1fr" gap={2}>                  <Text fontWeight="bold">Products</Text>
+                    <Text>Mono Connect</Text>
+                    <Text>Direct Debit</Text>
+                    <Text>Statement Pages</Text>
+                  </Grid>
 
-                <Grid direction="1fr" gap={2}>  
-                  <Text fontWeight="bold">Help & Resources</Text>
-                  <Text>Documentation</Text>
-                  <Text>API Refrence</Text>
-                  <Text>Help Desk</Text>
+                  <Grid direction="1fr" gap={2}>  
+                    <Text fontWeight="bold">Help & Resources</Text>
+                    <Text>Documentation</Text>
+                    <Text>API Refrence</Text>
+                    <Text>Help Desk</Text>
+                  </Grid>
                 </Grid>
               </Box>
 
               <Box>
-                <Grid templateColumns="1fr" gap={2}>  
-                  <Text fontWeight="bold">Use Cases</Text>
-                  <Text>Personal finances</Text>
-                  <Text>Account verification</Text>
-                  <Text>Lending</Text>
-                  <Text>Accounting</Text>
-                </Grid>
+                <Grid templateColumns="1fr" gap={4}>
+                  <Grid templateColumns="1fr" gap={2}>  
+                    <Text fontWeight="bold">Use Cases</Text>
+                    <Text>Personal finances</Text>
+                    <Text>Account verification</Text>
+                    <Text>Lending</Text>
+                    <Text>Accounting</Text>
+                  </Grid>
 
-                <Grid templateColumns="1fr" gap={2}>  
-                  <Text fontWeight="bold">Legal</Text>
-                  <Text>Privacy - End Users</Text>
-                  <Text>Developer Policy</Text>
-                  <Text>Terms</Text>
-                  <Text>Cookies</Text>
-                  <Text>Security</Text>
+                  <Grid templateColumns="1fr" gap={2}>  
+                    <Text fontWeight="bold">Legal</Text>
+                    <Text>Privacy - End Users</Text>
+                    <Text>Developer Policy</Text>
+                    <Text>Terms</Text>
+                    <Text>Cookies</Text>
+                    <Text>Security</Text>
+                  </Grid>
                 </Grid>
               </Box>
               
 
               <Box>
-                <Grid templateColumns="1fr" gap={2}>  
-                  <Text fontWeight="bold">Company</Text>
-                  <Text>About</Text>
-                  <Text>Contact</Text>
-                  <Text>Blog</Text>
-                  <Text>We are hiring </Text>
-                </Grid>
+                <Grid templateColumns="1fr" gap={4}>  
+                  <Grid templateColumns="1fr" gap={2}>  
+                    <Text fontWeight="bold">Company</Text>
+                    <Text>About</Text>
+                    <Text>Contact</Text>
+                    <Text>Blog</Text>
+                    <Text>We are hiring 🎉</Text>
+                  </Grid>
 
-                <Grid templateColumns="1fr" gap={2}>  
-                  <Text fontWeight="bold">Coverage</Text>
-                  <Text><sub>NG</sub> Nigeria</Text>
-                  <Text><sub>GH</sub> Ghana - Soon</Text>
-                  <Text><sub>KE</sub> Kenya - Soon</Text>
+                  <Grid templateColumns="1fr" gap={2}>  
+                    <Text fontWeight="bold">Coverage</Text>
+                    <Text><sub>NG</sub> Nigeria</Text>
+                    <Text><sub>GH</sub> Ghana - Soon</Text>
+                    <Text><sub>KE</sub> Kenya - Soon</Text>
+                  </Grid>
                 </Grid>
               </Box>
             </Grid>
+        </Box>
+
+        <Flex direction="row" pr="6.3rem" pl="6.3rem">
+          <Box>
+            <Text>© Mono Technologies Nigeria Limited</Text>
+          </Box>
+          <Spacer />
+          <HStack>
+            <HStack spacing={1}>
+              <Image src={Twitter} />
+              <Text>Twitter</Text>
+            </HStack>
+
+            <sup>.</sup>
+            
+            <HStack spacing={1}>
+              <Image src={LinkedIn} />
+              <Text>LinkedIn</Text>
+            </HStack>
+          </HStack>
+        </Flex>
         </Box>
     </Box>
   );
