@@ -1,7 +1,8 @@
 import './App.css';
-import {Button, Box, Link, Spacer, Text, HStack, Flex, Grid, Tabs, TabList, TabPanels, TabPanel, Image} from '@chakra-ui/react';
+import {Button, Box, Link, Spacer, Text, HStack, Flex, Grid, Tab, Tabs, TabList, TabPanels, TabPanel, Image} from '@chakra-ui/react';
 import Nigeria from './assets/nigeria.svg';
 import Blue from './assets/blue.svg';
+import Blue2 from './assets/blue2.svg';
 import {BsArrowRight} from 'react-icons/bs';
 import {BiHeadphone} from 'react-icons/bi';
 import Phone from './assets/landing-hero-phone.png';
@@ -18,11 +19,13 @@ import DirectDebit from './assets/direct-debit.svg';
 import DirectDebitI from './assets/direct-debit-i.svg';
 import StatementPages from './assets/statement-pages.svg';
 import StatementPagesI from './assets/statement-pages-i.svg';
+import Background from './assets/hero-blue.svg';
+import Developers from './assets/developers.svg';
 
 function App() {
   return (
     <Box>
-      <Grid templateColumns="3fr" gap={6} pr="6.3rem" pl="6.3rem" pt="0.2em" overflow="hidden" className="header">
+      <Grid templateColumns="3fr" backgroundImage={Background} gap={6} pr="6.3rem" pl="6.3rem" pt="0.2em" overflow="hidden" className="header">
         <HStack>
           <Image src={Blue} width="24" height="24" />
           <Spacer />
@@ -106,7 +109,7 @@ function App() {
 
         <Grid templateColumns="1fr 1fr">
             <Box>
-              <Button color="#ffaf2c"  backgroundColor="rgba(255,175,44,.1)">
+              <Button color="#ffaf2c" mb="1rem" backgroundColor="rgba(255,175,44,.1)">
                 Elevating financial innovation
               </Button>
               <Text color="black" fontSize="4xl">
@@ -115,8 +118,8 @@ function App() {
             </Box>
           
             <Box>
-              <Text fontSize="1.8rem" lineHeight="2.8rem">Access a broad range of high-quality financial ddata from institutions across Africa through a single API. With Mono, you can provide new customer experiences.</Text>
-              <Button color="white"  backgroundColor="#182cd1">
+              <Text fontSize="1rem" mb="1rem" lineHeight="2.8rem">Access a broad range of high-quality financial ddata from institutions across Africa through a single API. With Mono, you can provide new customer experiences.</Text>
+              <Button color="white" mb="1rem" backgroundColor="#182cd1">
                 <HStack>
                   <Text>See a demo</Text>
                   <BsArrowRight />
@@ -128,7 +131,7 @@ function App() {
         <Grid templateColumns="1fr 1fr" mt="2rem">
           <Box>
             <Image src={FinancialData} width="8rem" height="8rem" mb="5rem" />
-            <Text  pb="1.5rem" color="#050929">Connect</Text>
+            <Text  pb="1.5rem" color="#050929" fontSize="3xl">Connect</Text>
             <Text pt="3rem">Mono connect allows access to financial data from your user's financial account. With Connect, you can get your customers transactions, real time balances, income etc.</Text>
             <Button color="white"  mt="3rem" backgroundColor="#182cd1">
               <HStack>
@@ -164,10 +167,10 @@ function App() {
           </Box>
         </Grid>
 
-        <Grid templateColumns="1fr 1fr" mt="2rem">
+        <Grid templateColumns="1fr 1fr" mt="2rem" bg="transparent">
           <Box>
             <Image src={DirectDebit} width="8rem" height="8rem" mb="5rem" />
-            <Text  pb="1.5rem" color="#050929">Direct Debit</Text>
+            <Text  pb="1.5rem" color="#050929" fontSize="3xl">Direct Debit</Text>
             <Text pt="3rem">Seamlessly initiate recurring direct debit</Text>
             <Button color="white"  mt="3rem" backgroundColor="#182cd1">
               <HStack>
@@ -206,7 +209,7 @@ function App() {
         <Grid templateColumns="1fr 1fr" mt="2rem">
           <Box>
             <Image src={StatementPages} width="8rem" height="8rem" mb="5rem" />
-            <Text  pb="1.5rem" color="#050929" fontSize="3xl">Direct Debit</Text>
+            <Text  pb="1.5rem" color="#050929" fontSize="3xl">Statement Pages</Text>
             <Text pt="3rem">Seamlessly initiate recurring direct debit</Text>
             <Button color="white"  mt="3rem" backgroundColor="#182cd1">
               <HStack>
@@ -242,6 +245,158 @@ function App() {
           </Box>
         </Grid>
       </Box>
+
+        <Grid templateColumns="1fr 1fr" backgroundColor="current" backgroundImage={Developers} mt="2rem">
+          <Box pl="6.3rem" p="7rem" minHeight="450px">
+            <Button color="orange" mb="3rem">
+              <Text>Built with 💙 for developers</Text>
+            </Button>
+            <Text color="white"  mb="3rem" fontSize="5xl">Powerful, easy-to-use</Text>
+            <Text color="white"  mb="3rem">We agonize over the right abstractions so your teams don't need to stich together disperate systems or spend months to integrate. We have made integration easy for you with simple API call and clear documentation guides to ensure that you can get up and running in on time.</Text>
+            <Button color="black">
+              <HStack spacing={3}>
+                <Text>Explore docs</Text>
+                <BsArrowRight />
+              </HStack>
+            </Button>
+          </Box>
+          <Box pr="6.3rem"  minHeight="600px">
+            <Tabs backgroundColor="navy" color="white" isFitted p="1.5rem">
+              <TabList>
+                <Tab>Authenticate</Tab>
+                <Tab>Get Account</Tab>
+                <Tab>Get Transaction</Tab>
+              </TabList>
+
+              <TabPanels>
+                <TabPanel>
+                  <Flex direction="column">
+                    <Box backgroundColor="navy" p="1.5rem">
+                      <Text fontSize="3xl">
+                        Exchange Token
+                      </Text>
+                      <Link color="green">Endpoint - https://api.withmono.com/account/auth</Link>
+                      <Link color="green">
+                        <HStack spacing={3}>
+                          <Text>Method</Text>
+                          <Button borderRadius="full" color="white" backgroundColor="orange">POST</Button>
+                        </HStack>
+                      </Link>
+                    </Box>
+
+
+                    <Box p="1.5rem">
+                      <Text>{'{'}</Text>
+                      <HStack>
+                        <Text color="#457667" pl="1.8rem">code: </Text>
+                        <Text color="#659867">"has7tgas7t73"</Text>
+                        <Text color="#989898">//code returned from mono connect</Text>
+                      </HStack>
+                      <Text>{'}'}</Text>
+                    </Box>
+
+
+                    <Box p="1.5rem">
+                      <Flex direction="row">
+                        <Button color="#182cd1">
+                          <HStack spacing={3}>
+                            <Text>Click here to run </Text>
+                            <BsArrowRight />
+                          </HStack>
+                        </Button>
+  
+                        <Text borderRadius="full" color="orange">JSon</Text>
+                      </Flex>
+                    </Box>
+                  </Flex>
+                </TabPanel>
+              </TabPanels>
+            </Tabs>
+          </Box>
+        </Grid>
+
+          <Grid templateColumns="1fr 1fr"  pl="6.3rem" pr="6.3rem">
+            <Box>
+              <Text fontSize="6xl">Getting started takes less than 10 minutes</Text>
+            </Box>
+            
+            <Flex direction="row" align-items="end">
+              <HStack spacing={2}>
+                <Button color="white" backgroundColor="blue">
+                  <HStack spacing={2}>
+                    <Text>Start now</Text>
+                    <BsArrowRight />
+                  </HStack>
+                </Button>
+                <Button color="blue" backgroundColor="whitesmoke">
+                  <HStack spacing={2}>
+                    <Text>Talk to sales team</Text>
+                    <BiHeadphone />
+                  </HStack>
+                </Button>
+              </HStack>
+            </Flex>
+          </Grid>
+
+        <Box pl="6.3rem" pr="6.3rem" pt="1.5rem">
+          <Grid templateColumns="1fr 1fr 1fr 1fr" gap={8}>
+            <Box>
+              <Image src={Blue2} />
+            </Box>
+
+              <Box>
+                <Grid templateColumns="1fr" gap={2}>                  <Text fontWeight="bold">Products</Text>
+                  <Text>Mono Connect</Text>
+                  <Text>Direct Debit</Text>
+                  <Text>Statement Pages</Text>
+                </Grid>
+
+                <Grid direction="1fr" gap={2}>  
+                  <Text fontWeight="bold">Help & Resources</Text>
+                  <Text>Documentation</Text>
+                  <Text>API Refrence</Text>
+                  <Text>Help Desk</Text>
+                </Grid>
+              </Box>
+
+              <Box>
+                <Grid templateColumns="1fr" gap={2}>  
+                  <Text fontWeight="bold">Use Cases</Text>
+                  <Text>Personal finances</Text>
+                  <Text>Account verification</Text>
+                  <Text>Lending</Text>
+                  <Text>Accounting</Text>
+                </Grid>
+
+                <Grid templateColumns="1fr" gap={2}>  
+                  <Text fontWeight="bold">Legal</Text>
+                  <Text>Privacy - End Users</Text>
+                  <Text>Developer Policy</Text>
+                  <Text>Terms</Text>
+                  <Text>Cookies</Text>
+                  <Text>Security</Text>
+                </Grid>
+              </Box>
+              
+
+              <Box>
+                <Grid templateColumns="1fr" gap={2}>  
+                  <Text fontWeight="bold">Company</Text>
+                  <Text>About</Text>
+                  <Text>Contact</Text>
+                  <Text>Blog</Text>
+                  <Text>We are hiring </Text>
+                </Grid>
+
+                <Grid templateColumns="1fr" gap={2}>  
+                  <Text fontWeight="bold">Coverage</Text>
+                  <Text><sub>NG</sub> Nigeria</Text>
+                  <Text><sub>GH</sub> Ghana - Soon</Text>
+                  <Text><sub>KE</sub> Kenya - Soon</Text>
+                </Grid>
+              </Box>
+            </Grid>
+        </Box>
     </Box>
   );
 }
