@@ -53,7 +53,7 @@ function App() {
           </HStack>
         </HStack>
 
-        <Grid templateColumns="2fr 2fr" gap={5} mt="-6rem">
+        <Grid templateColumns="2fr 2fr" gap={8} mt="-6rem">
           <Grid templateColumns="1fr" gap={4}>
             <Box>
               <Text color="white" fontSize="6xl" lineHeight="4rem">Access financial accounts across Africa with mono</Text>
