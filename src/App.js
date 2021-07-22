@@ -28,7 +28,7 @@ import Developers from './assets/developers.svg';
 function App() {
   return (
     <Box>
-      <Grid templateColumns="3fr" backgroundImage={Background} gap={6} pr="6.3rem" pl="6.3rem" pt="0rem" overflow="hidden" className="header">
+      <Grid templateColumns="3fr" backgroundImage={Background} gap={6} pr="6.3rem" pl="6.3rem" mt="-5rem" overflow="hidden" className="header">
         <HStack pt="0rem">
           <Image src={Blue} width="24" height="24" />
           <Spacer />
@@ -53,16 +53,16 @@ function App() {
           </HStack>
         </HStack>
 
-        <Grid templateColumns="2fr 2fr" gap={8}>
+        <Grid templateColumns="2fr 2fr" gap={5} mt="-6rem">
           <Grid templateColumns="1fr" gap={4}>
             <Box>
               <Text color="white" fontSize="6xl" lineHeight="4rem">Access financial accounts across Africa with mono</Text>
             </Box>
-            <Grid templateColumns="1fr" gap={5}>
+            <Grid templateColumns="1fr" gap={5}  mt="-3rem">
               <Box>
                 <Text color="white" fontSize="1xl">Mono helps digital businesses in Africa access their customer's financial account for data and payments</Text>
               </Box>
-              <Box>
+              <Box mt="-2rem">
                 <HStack spacing={4}>
                   <Button color="#182cd1" p="1.5rem 2rem" backgroundColor="hsla(0,0%,100%,.9)">
                     <HStack sapcing={2}>
@@ -110,7 +110,7 @@ function App() {
           </Grid>
         </Box>
 
-        <Grid templateColumns="1fr 1fr">
+        <Grid templateColumns="1fr 1fr" gap={8}>
             <Box>
               <Button color="#ffaf2c" mb="1rem" backgroundColor="rgba(255,175,44,.1)">
                 Elevating financial innovation
@@ -320,7 +320,7 @@ function App() {
           </Box>
         </Grid>
 
-          <Grid templateColumns="1fr 1fr"  pl="6.3rem" pr="6.3rem">
+          <Grid templateColumns="1fr 1fr" mt="3rem" pl="6.3rem" pr="6.3rem">
             <Box>
               <Text fontSize="6xl">Getting started takes less than 10 minutes</Text>
             </Box>
@@ -346,7 +346,7 @@ function App() {
             </Flex>
           </Grid>
 
-        <Box backgroundImage={Footer}>
+        <Box backgroundImage={Footer} mt="6rem">
         <Box pl="6.3rem" pr="6.3rem" pt="1.5rem">
           <Grid templateColumns="1fr 1fr 1fr 1fr" gap={8}>
             <Box>
@@ -355,7 +355,8 @@ function App() {
 
               <Box>
                 <Grid templateColumns="1fr" gap={4}>
-                  <Grid templateColumns="1fr" gap={2}>                  <Text fontWeight="bold">Products</Text>
+                  <Grid templateColumns="1fr" gap={2}>
+                    <Text fontWeight="bold">Products</Text>
                     <Text>Mono Connect</Text>
                     <Text>Direct Debit</Text>
                     <Text>Statement Pages</Text>
@@ -413,7 +414,7 @@ function App() {
             </Grid>
         </Box>
 
-        <Flex direction="row" pr="6.3rem" pl="6.3rem">
+        <Flex direction="row" pr="6.3rem" pl="6.3rem" mt="6rem">
           <Box>
             <Text>© Mono Technologies Nigeria Limited</Text>
           </Box>
